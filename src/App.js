@@ -15,7 +15,11 @@ class App extends Component {
   async componentDidMount() {
     await fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
-    .then(response => console.log(response));
+    .then(users => this.setState(() => {
+      return {monsters: users};
+    }, () => {
+      console.log(this.state);
+    }));
   }
 
   render() {
