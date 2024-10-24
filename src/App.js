@@ -12,6 +12,12 @@ class App extends Component {
     };
   }
 
+  async componentDidMount() {
+    await fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(response => console.log(response));
+  }
+
   render() {
     return (
       <div className="App">
