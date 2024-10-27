@@ -6,7 +6,7 @@ const CardList = ({ monsters }) => (
         {monsters.map(monster => {
             const { id, name, email } = monster;
             return (
-                <Card id={id} name={name} email={email} />                
+                <Card key={monster.id} id={id} name={name} email={email} />                
             )})}
     </div>
 );
