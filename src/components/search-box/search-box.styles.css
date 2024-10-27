@@ -3,7 +3,16 @@
     border: none;
     outline: none;
     padding: 10px;
-    width: 150px;
+    width: 300px;
     line-height: 30px;
     margin-bottom: 30px;
+}
+
+.search-box::placeholder {
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.search-box:focus::placeholder {
+    opacity: 0;
 }
